@@ -1,0 +1,192 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --bg: #ffffff;
+    --main: #ffa500;
+}
+
+@keyframes blink-cursor {
+  	0% {
+	  border-color: var(--main); 
+  	}
+  	50% {
+	  border-color: transparent; 
+  	}
+  	100% {
+    	border-color: var(--main); 
+	} 
+}
+
+@keyframes typing {
+  0% {
+    width: 0; 
+	}
+  50% {
+    width: 0; 
+  }
+  100% {
+    width: 100%; } 
+}
+
+
+html,body{
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    background: var(--bg)
+}
+
+.topnav {
+    background-color: #efefef;
+    border:none;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #7e7b79;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: var(--main);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: var(--main);
+}
+
+.logo
+{
+    float: left;
+    height: 70px;
+}
+
+div{
+    //color:var(--main);
+}
+
+h1,h2,h3 {
+	color: var(--main);
+	font-family: 'Roboto Mono';
+	font-weight: 500;
+	font-size: calc( 6vw );
+	text-align: center;
+	margin: 0 10px;
+	text-align: center
+}
+
+h3 {
+	color: #777777;
+	font-size: calc(2vw + 5px);
+	margin: 0;
+	padding: 0px 10vw;
+	font-weight: 300;
+}
+
+#classespreview {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+#preview1 {
+	background-image: url( "../media/robotadultpreview.jpg");
+}
+
+.previewimagecontainer {
+	text-align: center;
+	font-size:20px;
+}
+
+#preview2 {
+	transition: 0.25s;
+	background-image: url( "../media/kidspreviewimage1.jpg");
+}
+#preview2:hover
+{
+	transition: 0.25s;
+	background-image: url( "../media/kidspreviewimage2.jpg");
+}
+
+.previewimage {
+	background-size: cover;
+	width:  calc( 2vw + 250px );
+	height: calc( 2vw + 182px );
+	border-radius: 5px;
+	margin: 10px 40px;
+}
+.previewimage:hover
+{
+	cursor: pointer;
+}
+
+#preview3 {
+	background-image: url( "../media/viazoompreview.jpg");
+}
+
+.button {
+	transition: 0.2s;
+	font-size: 17px;
+	border: 2px solid  var(--main);
+	border-radius: 20px;
+	background-color: var(--main);
+	padding: 10px 15px;
+	font-weight: 500;
+	color: var(--bg);
+}
+.button:hover{
+	transition: 0.2s;
+	background-color: var(--bg);
+	color: var(--main);
+	cursor: pointer;
+}
+
+h2 {
+	font-size: calc(3vw + 20px);
+	color: orange
+}
+
+h1 {
+	//letter-spacing: 0px;
+}
+
+#titlesection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	background-image: url("../media/titlerobot\ copy.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+
+#typewriter {
+	height: (11vw);
+	border-right: 5px solid var(--main);
+	white-space: nowrap;
+  	animation: blink-cursor 1s step-end infinite, typing 3s steps(24, end);;
+	animation-delay: 0s;
+	overflow: hidden;
+	margin: 30px auto;
+	user-select: none;
+
+}
+
+#typewrapper {
+	width: calc( 86% + 23px );
+	margin: auto;
+}
