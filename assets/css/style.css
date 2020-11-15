@@ -95,6 +95,7 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	padding: 50px;
+	padding-top: 0px;
 }
 
 #preview1 {
@@ -361,6 +362,7 @@ hr {
 	}
 	#titlevideo
 	{
+		margin-bottom: 0;
 		position: relative;
 	}
 }
