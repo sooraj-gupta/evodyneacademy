@@ -71,26 +71,22 @@ html,body{
     height: 70px;
 }
 
-div{
-    //color:var(--main);
-}
+
 
 h1,h2,h3 {
 	color: var(--main);
 	font-family: 'Roboto Mono';
 	font-weight: 500;
-	font-size: calc( 6vw );
+	font-size: calc( 2vw + 30px );
+	margin: 0px 5%;
 	text-align: center;
-	margin: 0 10px;
-	text-align: center
 }
 
 h3 {
-	color: #777777;
-	font-size: calc(2vw + 5px);
-	margin: 0;
-	padding: 0px 10vw;
+	color: #eee;
+	font-size: calc(2vw + 0px);
 	font-weight: 300;
+	text-align: left;
 }
 
 #classespreview {
@@ -137,6 +133,7 @@ h3 {
 }
 
 .button {
+	text-decoration: none;
 	transition: 0.2s;
 	font-size: 17px;
 	border: 2px solid  var(--main);
@@ -145,6 +142,7 @@ h3 {
 	padding: 10px 15px;
 	font-weight: 500;
 	color: var(--bg);
+	user-select: none;
 }
 .button:hover{
 	transition: 0.2s;
@@ -159,19 +157,16 @@ h2 {
 }
 
 h1 {
-	//letter-spacing: 0px;
+	text-shadow: 0px 0px 10px #885800;
+	line-height: 1em;
+	
+	text-align: left;
 }
 
-#titlesection {
+#titlesection, #titlesectionmobile {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 	height: 100vh;
-	background-image: url("../media/titlerobot\ copy.jpeg");
-	background-size: cover;
-	background-position: center;
+	z-index: 50;
 }
 
 #typewriter {
@@ -190,3 +185,183 @@ h1 {
 	width: calc( 86% + 23px );
 	margin: auto;
 }
+
+#titlediv, #titledivmob {
+	width: 100%;
+	text-align: left;
+	z-index: 100;
+	//display: flex;
+	align-items: center;
+}
+#titlediv div
+{
+	width: 50%;
+}
+
+#titlevideo {
+	overflow: hidden;
+	width: 100vw;
+	z-index: 1;
+	position: absolute;
+	background-size: cover;
+}
+
+#titledivwrapper, #titledivwrappermob {
+	margin-top: 9vw;
+	z-index: 100;
+}
+
+.button:active {
+	color: black;
+	border: 2px solid black;
+}
+
+
+
+
+
+.blockquote-wrapper {
+	padding: 0 25px;
+}
+
+/* Blockquote main style */
+.blockquote {
+    position: relative;
+    max-width: 720px;
+    margin: 80px auto;
+    align-self: center;
+}
+
+/* Blockquote header */
+.blockquote h1 {
+	text-shadow: none;
+	font-size: 25px;
+    position: relative; 
+    color: orange;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    border: solid 2px black;
+    border-radius:20px;
+    padding: 35px;
+}
+
+/* Blockquote right double quotes */
+.blockquote h1:after {
+    content:"";
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -62px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3; 
+}
+.blockquote h1 .quote
+{
+	width: 50px;
+}
+
+.blockquote h1:before {
+    content:"";
+    position: absolute;
+    width: 80px;
+    border: 6px solid #ffffff;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
+
+/* increase header size after 600px */
+
+.blockquote h4 {
+    position: relative;
+	font-size: 20px;
+    color: #000;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 20px;
+    margin-left: 150px;
+    padding-left: 12px;
+}
+
+.splitview div {
+	width: 40%;
+	font-size: 15px;
+	font-weight: 100;
+	margin-right: 50px;
+}
+
+.splitview {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.splitview img {
+	border-radius: 20px;
+	width: calc( 15vw + 200px );	
+}
+
+.splitview div h3 {
+	text-align: center;
+	color: orange;
+	font-size: 30px;
+}
+
+hr {
+	width: 50vw;
+}
+
+#titlesectionmobile
+{
+	display: none;
+}
+@media ( max-width: 990px )
+{
+	.splitview div {
+		width: 80%;
+		margin-right: 0px;
+	}
+	.splitview img {
+		width: 80%;
+	}
+
+}
+
+@media ( max-width: 900px )
+{
+	#titlesectionmobile
+	{
+		display: flex;
+		justify-content: center;
+		height: auto;
+		margin-bottom: 50px;
+	}
+	#titledivwrappermob
+	{
+		margin-top: 50ps;	
+	}
+	#titledivmob div h1
+	{
+		text-shadow: 0px 0px 5px #ffa500;
+	}
+	#titledivmob div h3
+	{
+		color: black;
+		font-size: calc(2vw + 5px);
+	}
+	#titlesection
+	{
+		display: none;
+	}
+	#titlevideo
+	{
+		position: relative;
+	}
+}
+
