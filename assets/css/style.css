@@ -25,7 +25,8 @@
     width: 0; 
   }
   100% {
-    width: 100%; } 
+    width: 100%; 
+	} 
 }
 
 html,body{
@@ -38,14 +39,13 @@ html,body{
 }
 
 .topnav {
-    background-color: #efefef;
+    background-color: #ffffff;
     border:none;
     padding: 20px;
     overflow: hidden;
 	z-index: 100;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: right;
   color: #7e7b79;
@@ -101,7 +101,7 @@ h3 {
 }
 
 #preview1 {
-	background-image: url( "../media/interest.png");
+	background-image: url( "../media/robotadultpreview.jpg");
 }
 
 .previewimagecontainer {
@@ -122,7 +122,7 @@ h3 {
 .experienceimage {
 	background-size: cover;
 	width:  calc( 2vw + 250px );
-	height: calc( 2vw + 250px );
+	height: calc( 2vw + 220px );
 	border-radius: 5px;
 	margin: 10px 40px;
 }
@@ -169,6 +169,7 @@ h3 {
 
 h2 {
 	font-size: calc(3vw + 20px);
+	font-weight: 300;
 	color: orange
 }
 
@@ -180,9 +181,11 @@ h1 {
 }
 
 #titlesection, #titlesectionmobile {
-	background-color: transparent;
 	display: flex;
-	padding-bottom: calc( 20vw - 150px );
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: black;
+	height: calc(41vw);
 	z-index: 50;
 }
 
@@ -204,12 +207,11 @@ h1 {
 }
 
 #titlediv, #titledivmob {
-	background-color: transparent;
-	width: 100%;
+	background-color: transparent	;
+	
+	width: 99vw;
 	text-align: left;
 	z-index: 100;
-	//display: flex;
-	align-items: center;
 }
 #titlediv div
 {
@@ -228,7 +230,6 @@ h1 {
 
 #titledivwrapper, #titledivwrappermob {
 	background-color: transparent;
-	margin-top: 9vw;
 	z-index: 100;
 }
 
@@ -342,7 +343,11 @@ hr {
 
 .desktop
 {
-	display: initial;
+	display: block;
+}
+
+.topnavmob {
+		display: none;
 }
 @media ( max-width: 990px )
 {
@@ -362,13 +367,34 @@ hr {
 	{
 		display: none;
 	}
-	#mobmenuwrapper
+	.topnav
 	{
-		display: block;
+		display: none;
 	}
+	.topnavmob {
+		display: block;
+    	background-color: #ffffff;
+    	border:none;
+    	padding: 20px;
+   		height: 45px;
+		
+	}
+
+	.topnavmob a {
+	  float: right;
+	  color: #7e7b79;
+	  text-align: center;
+	  padding: 20px;
+	  margin: 0;
+	  text-decoration: none;
+	  font-size: 20px;
+	  z-index: 100;
+	}
+	.topnavmob div
+
 	.mobile
 	{
-		display: initial;
+		display: block;
 	}
 
 }
@@ -378,31 +404,24 @@ hr {
 	#titlesectionmobile
 	{
 		display: flex;
-		justify-content: center;
-		height: auto;
-		padding-bottom: 50px;
+		padding-bottom: 0;
 	}
 	#titledivwrappermob
 	{
-		padding-top: 50p;	
 	}
 	#titledivmob div h1
 	{
-		text-shadow: 0px 0px 5px #ffa500;
+		font-size: 25px;
+		
 	}
 	#titledivmob div h3
 	{
-		color: black;
-		font-size: calc(2vw + 5px);
+		color: white;
+		font-size: calc(2vw + 4px);
 	}
 	#titlesection
 	{
 		display: none;
-	}
-	#titlevideo
-	{
-		margin-bottom: 0;
-		position: relative;
 	}
 }
 
@@ -437,6 +456,9 @@ div,section {
 
 #bg1 {
 	background-image: url( "../media/titlerobot.jpeg");
+	display: flex;
+	justify-content: flex-end;
+	align-items:center;
 }
 
 .bg {
@@ -446,23 +468,18 @@ div,section {
   	background-position: center;
   	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	align-items:center;
 }
 
 #testimonials {
 	margin-top: 100px;
 }
 
-#mobmenuwrapper {
-	display: none;
-}
-
-#mobmenuwrapper a {
-	position: fixed;
-	right: 0;
-}
 
 #bg2 {
 	background-image: url( "../media/piimage.jpeg");
+	
 }
 
 #howiitworks {
@@ -535,4 +552,81 @@ footer, footer div {
 
 #bg5 {
 	background-image: url( "../media/3dprinting.jpeg");
+}
+
+#experience1 {
+	background-image: url( "../media/interest.png");
+}
+
+#bg2, #bg4 {
+	justify-content: flex-start;
+}
+
+#bg1, #bg3 {
+	justify-content: flex-end;
+}
+
+.button-clear {
+	background-color: transparent;
+	color: orange;
+}
+.button-clear:hover {
+	background-color: orange;
+	color: white;
+}
+.button-clear:active
+{
+	background-color: black;
+}
+
+.button-clear-hover:hover {
+	background-color: transparent;
+}
+
+
+#menubutton {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 30px;
+	transition: 1s;
+	z-index: 100000;
+	right: 20px;
+	top: 6px;
+}
+
+.button-nohover {
+	background-color: transparent;
+	border-color: white;
+}
+.button-nohover:hover {
+	background-color: transparent;
+	border-color:white;
+	color:white
+}
+
+.button-reg-small {
+	text-align: center;
+	font-size: 14px;
+	padding: 0.8em;
+	width: 80%;
+	margin: 15px 0px;
+	margin-bottom: 0;
+}
+
+
+
+#menumob {
+	transition: 1s;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	text-align: center;
+	width: 120px;
+	height: 120%;
+	background-color: white;
+	box-shadow: -2px -2px 10px #00000000;
+	z-index: 10000;
+	right: -120px;
+	top: 0;
 }
