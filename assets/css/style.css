@@ -91,7 +91,7 @@ h3 {
 	text-align: left;
 }
 
-#classespreview {
+#classespreview, #customizeexperience {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -101,7 +101,7 @@ h3 {
 }
 
 #preview1 {
-	background-image: url( "../media/robotadultpreview.jpg");
+	background-image: url( "../media/interest.png");
 }
 
 .previewimagecontainer {
@@ -119,10 +119,10 @@ h3 {
 	background-image: url( "../media/kidspreviewimage2.jpg");
 }
 
-.previewimage {
+.experienceimage {
 	background-size: cover;
 	width:  calc( 2vw + 250px );
-	height: calc( 2vw + 182px );
+	height: calc( 2vw + 250px );
 	border-radius: 5px;
 	margin: 10px 40px;
 }
@@ -157,6 +157,14 @@ h3 {
 [class *= "button-"]:active {
 	color: black;
 	border: 2px solid black;
+}
+
+.previewimage {
+	background-size: cover;
+	width:  calc( 2vw + 250px );
+	height: calc( 2vw + 182px );
+	border-radius: 5px;
+	margin: 10px 40px;
 }
 
 h2 {
@@ -520,7 +528,11 @@ footer, footer div {
 
 
 #bg4 {
-	background-image: url( "../media/3dprinting.jpeg");
+	background-image: url( "../media/3dprintfar.jpeg");
 }
 
 
+
+#bg5 {
+	background-image: url( "../media/3dprinting.jpeg");
+}
