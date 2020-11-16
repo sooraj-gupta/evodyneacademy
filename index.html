@@ -13,11 +13,16 @@
     <body>
        <div class="topnav">
            <img class = "logo" src = "assets/media/logo.png">
-           <a href="#about">About</a>
-           <a class="active" href="#home">Home</a>
+           <a href="" class = "desktop">About</a>
+           <a class="active desktop" href="">Home</a>
+		   <div id = "mobmenuwrapper">
+			   <a class="active" href="">Home</a>
+			   <a href="" class = "">About</a>
+		   </div>
        </div>
 		
 		
+
 		<section id = "titlesectionmobile">
 			<div id = "titledivwrappermob">
 				<div id = "titledivmob">
@@ -34,6 +39,7 @@
   				<source src="assets/media/evodynetitlevideo.mp4" type="video/mp4">
 			</video>
 		</div>
+		
 		<section id = "titlesection">
 			<div id = "titledivwrapper">
 				<div id = "titlediv">
@@ -45,6 +51,7 @@
 			</div>
 		</section>
 		
+		
 		<section id = "classespreview">
 			<h2 style = "width: 100%; margin: 30px;">Our Classes</h2>
 			<div class = "previewimagecontainer">
@@ -52,7 +59,7 @@
 				Adults 
 				<br>
 				<br>
-				<a href = "https://www.evodyneacademy.com/build-a-robot-arm-workshop" class = "button">Build a Robot: Workshop</a>
+				<a href = "https://www.evodyneacademy.com/build-a-robot-arm-workshop" class = "button-reg">Build a Robot: Workshop</a>
 				<br>
 				<br>
 				<br>
@@ -63,7 +70,7 @@
 				Kids 
 				<br>
 				<br>
-				<a class = "button">Build a Robot: Workshop</a>
+				<a class = "button-reg">Build a Robot: Workshop</a>
 				<br>
 				<br>
 				<br>
@@ -74,12 +81,14 @@
 				Via Zoom
 				<br>
 				<br>
-				<a class = "button">Build a Robot: Workshop</a>
+				<a class = "button-reg">Build a Robot: Workshop</a>
 				<br>
 				<br>
 				<a style = "font-size: 15px;">Enrollment closing November!</a>
 			</div>
 		</section>
+		
+		<section id = "bg1" class = bg></section>
 		
 		<section id = "testimonials">
 			<h2> Testimonials </h2>
@@ -125,29 +134,65 @@
 			</div>
 			
 		</section>
-		<br>
-		<hr> 
-		<br>
-		<br>
-		<br>
 		
 		
-		<section>
+		<section id = "bg2" class = bg></section>
 		
-			<section class = "splitview">
-			
-				<div>
-					<h3>How It Works</h3>
-					<p class = "">Historically, robotics has always been taught via software "simulations" of robots. Having practiced real robotics, we know this simply doesn't work. A solution that works perfectly on a "simulated robot" will fail miserably when connected to a real robot.  To solve this problem, a highly engineered and specially designed robotics kit (manufactured in California) containing a full robot arm and many other components is provided to every student at the beginning of every course.</p>
-					<br>
-					<h3>Distance Learning</h3>
-					<p class = "">Over the summer we have perfected our distance learning methodology. In fact, we have found that it allows many categories of folks to attend who may not be able to otherwise. Kits are mailed to attendees several days in advance. Each kit also contains a special webcam that allows the instructor to see a close-up view of your build in real-time and render assistance and supervision identically to in-person students.</p>
-				</div>
-				<img src = "assets/media/robotcup.jpg">
-			
-			</section>
 		
+		<section class = "splitview" style = "margin: 80px 0px">
+		
+			<div>
+				<h3>How It Works</h3>
+				<p class = "">Historically, robotics has always been taught via software "simulations" of robots. Having practiced real robotics, we know this simply doesn't work. A solution that works perfectly on a "simulated robot" will fail miserably when connected to a real robot.  To solve this problem, a highly engineered and specially designed robotics kit (manufactured in California) containing a full robot arm and many other components is provided to every student at the beginning of every course.</p>
+				<br>
+				<h3>Distance Learning</h3>
+				<p class = "">Over the summer we have perfected our distance learning methodology. In fact, we have found that it allows many categories of folks to attend who may not be able to otherwise. Kits are mailed to attendees several days in advance. Each kit also contains a special webcam that allows the instructor to see a close-up view of your build in real-time and render assistance and supervision identically to in-person students.</p>
+			</div>
+			<img class = "desktop" src = "assets/media/robotcup.jpg">
 		</section>
+		
+		<section class = "bg" id = "bg3"></section>
+			
+		<section class = "splitview" style = "padding: 80px 0px; background-color: orange;">
+
+			<img class = "desktop" src = "assets/media/snake.jpg" style = "margin-right: 50px; margin-left: 50px;">
+			<br>
+			<br>
+			<div>
+				<h3 style = "color: white">STEM Robotics Program | 13+</h3>
+				<p class = "">Our kids are constantly on their phones or laptops, but ask any 14 year old, "Do you know what is an ip-address?", or "Do you know the difference between your home wifi and phone's data plan?",  most likely you will get a blank stare. At Evodyne we think there is a significant lack of cohesiveness and leadership in our local schools regarding computer science awareness and curriculum. Even students attending their school FRC Robotics clubs are taught more about the mechanical, teamwork and competitive aspects of building robots, with minimal focus on software and programming skills.We aim to tackle this shortcoming with our STEM Internship Readiness Program. Are you a school administrator or teacher  looking for hands-on robotics classes with distance learning?</p>
+				<br>
+				<center>
+					<a class = "button-white">See Program Details</a>
+				</center>
+			</div>
+
+		</section>
+		
+		<section class = "bg" id = "bg4"></section>
+		
+		<section class = "splitview" style = "margin: 80px 0px">
+		
+			<div style = "width: 30%">
+				<h3>Build A Robot Workshop</h3>
+				<h4>For Adults with no recent engineering experience</h4>
+				<p class = "">Have you always had that visceral fascination with robots and a secret yearning to learn how they work, even though your current training and occupation are different? Then this course is for you! </p>
+				<br>
+				<center>
+					<a class = "button-reg">See Details</a>
+				</center>
+			</div>
+			<img class = "desktop" src = "assets/media/evodyne-academy-adults.jpg" style = "width: calc( 25vw + 200px );">
+		</section>
+		
+		
+		<footer>
+			<div style="width: 100%; padding: 0">
+				<img onclick = "window.location = 'https://www.facebook.com/evodyneroboticsacademy'" src ="assets/media/fb.png" class = "social">
+				<img onclick = "window.location = 'https://instagram.com/evodyneacademy'" src ="assets/media/ig.png" class = "social">
+			</div>
+			&#169;2019 Evodyne Robotics Corporation
+		</footer>
         <!--<div>
             <video width="890" height="504" controls>
             <source src="movie.mp4" type="video/mp4">
@@ -155,5 +200,6 @@
             </video>
         </div>-->
 		
+		<script src = "assets/js/main.js"></script>
     </body>
 </html>

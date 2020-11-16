@@ -28,13 +28,13 @@
     width: 100%; } 
 }
 
-
 html,body{
     font-family: 'Roboto Mono';
     font-weight: 300;
     padding: 0;
     margin: 0;
-    background: var(--bg)
+    background: var(--bg);
+	overflow-x: hidden;
 }
 
 .topnav {
@@ -42,6 +42,7 @@ html,body{
     border:none;
     padding: 20px;
     overflow: hidden;
+	z-index: 100;
 }
 
 /* Style the links inside the navigation bar */
@@ -53,6 +54,7 @@ html,body{
   margin: 10px;
   text-decoration: none;
   font-size: 20px;
+	z-index: 100;
 }
 
 /* Change the color of links on hover */
@@ -95,7 +97,7 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	padding: 50px;
-	padding-top: 0px;
+	padding-top: 50px;
 }
 
 #preview1 {
@@ -133,7 +135,7 @@ h3 {
 	background-image: url( "../media/viazoompreview.jpg");
 }
 
-.button {
+[class *= "button-"] {
 	text-decoration: none;
 	transition: 0.2s;
 	font-size: 17px;
@@ -145,11 +147,16 @@ h3 {
 	color: var(--bg);
 	user-select: none;
 }
-.button:hover{
+[class *= "button-"]:hover{
 	transition: 0.2s;
 	background-color: var(--bg);
 	color: var(--main);
 	cursor: pointer;
+}
+
+[class *= "button-"]:active {
+	color: black;
+	border: 2px solid black;
 }
 
 h2 {
@@ -165,8 +172,9 @@ h1 {
 }
 
 #titlesection, #titlesectionmobile {
+	background-color: transparent;
 	display: flex;
-	height: 100vh;
+	padding-bottom: calc( 20vw - 150px );
 	z-index: 50;
 }
 
@@ -188,6 +196,7 @@ h1 {
 }
 
 #titlediv, #titledivmob {
+	background-color: transparent;
 	width: 100%;
 	text-align: left;
 	z-index: 100;
@@ -197,46 +206,44 @@ h1 {
 #titlediv div
 {
 	width: 50%;
+	background-color: transparent;
 }
 
 #titlevideo {
 	overflow: hidden;
-	width: 100vw;
+	width: 100%;
 	z-index: 1;
 	position: absolute;
 	background-size: cover;
+	margin-bottom: 0;
 }
 
 #titledivwrapper, #titledivwrappermob {
+	background-color: transparent;
 	margin-top: 9vw;
 	z-index: 100;
 }
 
-.button:active {
-	color: black;
-	border: 2px solid black;
-}
-
-
-
 
 
 .blockquote-wrapper {
-	padding: 0 25px;
+	display: flex;
+	justify-content: center;
+	padding: 100px 20px;
+	padding-top: 50px;
 }
 
 /* Blockquote main style */
 .blockquote {
     position: relative;
     max-width: 720px;
-    margin: 80px auto;
     align-self: center;
 }
 
 /* Blockquote header */
 .blockquote h1 {
 	text-shadow: none;
-	font-size: 25px;
+	font-size: 20px;
     position: relative; 
     color: orange;
     font-weight: 300;
@@ -294,6 +301,7 @@ h1 {
 	font-size: 15px;
 	font-weight: 100;
 	margin-right: 50px;
+	line-height: 2em;
 }
 
 .splitview {
@@ -316,11 +324,17 @@ h1 {
 
 hr {
 	width: 50vw;
+	color: #00ff00 !important;
 }
 
 #titlesectionmobile
 {
 	display: none;
+}
+
+.desktop
+{
+	display: initial;
 }
 @media ( max-width: 990px )
 {
@@ -330,6 +344,23 @@ hr {
 	}
 	.splitview img {
 		width: 80%;
+	}
+	
+	.blockquote h1
+	{
+		font-size: 20px;
+	}
+	.desktop
+	{
+		display: none;
+	}
+	#mobmenuwrapper
+	{
+		display: block;
+	}
+	.mobile
+	{
+		display: initial;
 	}
 
 }
@@ -341,11 +372,11 @@ hr {
 		display: flex;
 		justify-content: center;
 		height: auto;
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 	}
 	#titledivwrappermob
 	{
-		margin-top: 50ps;	
+		padding-top: 50p;	
 	}
 	#titledivmob div h1
 	{
@@ -366,4 +397,130 @@ hr {
 		position: relative;
 	}
 }
+
+
+#parallax {
+	position: fixed;
+	width: 100%;
+	height 100vh;
+	//left: 0;
+	//top: 200px;
+	background-color: blue;
+	//background-image: url("../media/robotcup.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+
+div,section {
+}
+
+
+
+#videocontainer {
+}
+
+.hr
+{
+	width: 100%;
+	height: 10px;
+	background-color: white;
+}
+
+#bg1 {
+	background-image: url( "../media/titlerobot.jpeg");
+}
+
+.bg {
+	width: 100%;
+	height: 80vh;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#testimonials {
+	margin-top: 100px;
+}
+
+#mobmenuwrapper {
+	display: none;
+}
+
+#mobmenuwrapper a {
+	position: fixed;
+	right: 0;
+}
+
+#bg2 {
+	background-image: url( "../media/piimage.jpeg");
+}
+
+#howiitworks {
+	margin-top: 100px;
+}
+
+.mobile {
+	display: initial;
+	display: none;
+}
+
+p {
+	font-size: 15px;
+}
+
+#bg3 {
+	background-image: url( "../media/tictactoe.JPG");
+}
+
+.text {
+	color: white;
+}
+
+.white {
+	color: white;
+}
+
+.button-white {
+	background-color: white;
+	color: orange;
+	border-color: white;
+}
+.button-white:hover
+{
+	background-color: orange;
+	color: white;
+}
+
+footer, footer div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 80px 0;
+}
+
+.social {
+	width:50px;
+	height:50px;
+	margin: 20px;
+}
+
+.social:hover {
+	cursor: pointer;
+}
+
+.splitview div h4 {
+	text-align: center;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+
+
+#bg4 {
+	background-image: url( "../media/3dprinting.jpeg");
+}
+
 
