@@ -558,8 +558,9 @@ footer, footer div {
 	
 	.blockquote h1
 	{
-		font-size: 20px;
+		font-size: 16px;
 	}
+	
 	.desktop
 	{
 		display: none;
@@ -613,12 +614,13 @@ footer, footer div {
 		display: flex;
 		padding-bottom: 0;
 	}
-	#titledivwrappermob
+	.blockquote h1 .quote
 	{
+		width: 30px;
 	}
 	#titledivmob div h1
 	{
-		font-size: 20px;
+		font-size: 25px;
 		
 	}
 	#titledivmob div h3
