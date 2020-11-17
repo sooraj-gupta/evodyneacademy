@@ -193,7 +193,8 @@ h1 {
 }
 #titlesection
 {
-	margin-bottom: calc(9vw);
+	height: 31vw;
+	margin-bottom: calc(3vw);
 }
 
 #typewriter {
