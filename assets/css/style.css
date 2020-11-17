@@ -539,7 +539,13 @@ footer, footer div {
 	margin-bottom: 0;
 }
 
-
+#mobbuttons {
+	opacity: 0;
+	display: flex;
+	z-index: 100;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 @media ( max-width: 990px )
 {
 	.splitview div {
@@ -640,8 +646,9 @@ footer, footer div {
 	[class *= "button-"] {
 		font-size: 15px;
 	}
+	#mobbuttons
+	{
+		opacity: 1;
+	}
 
 }
-
-
-
