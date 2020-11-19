@@ -11,11 +11,12 @@ console.log("To set color, copy this code into CSS: \n\n:root\n{\n\t--maincolorf
 console.log("To set social media links, copy this code into JavaScript: \n\nvar facebookLink = 'https://facebook.com';\nvar instagramLink = 'https://instagram.com';\nvar twitterLink = 'https://twitter.com';\n\n/*To omit a button, leave the value of the link variable as blank. \(eg. twitterLink = ''\)*/\n\n");
 
 console.log("\nTo set the path to THIS folder, copy this code into JavaScript: \n\nvar pathToFolder = 'path/to/folder/'; /* YOU MUST HAVE A SLASH AT THE END */");
-function clickButton()
+
+function clickButton( state )
 {
 	clicked = !clicked;
-	var state = "close";
 	var clickfunc = "clickButton()";
+	var state;
 	if( clicked ){
 		state = "open";
 		clickfunc = "";
@@ -35,11 +36,11 @@ function clickButton()
 	if( clicked )
 		document.getElementById( "dots" ).style.transform = "rotate(-90deg)";
 
-	var facebookEl = ( facebookLink == "" ) ? " " :"<img class = socialmedia src = '" + pathToFolder + "images/facebook.png' onclick = \"l('" + facebookLink + "')\">"
-	var igEl = ( instagramLink == "" ) ? " " :"<img class = socialmedia src = '" + pathToFolder + "images/instagram.png' onclick = \"l('" + instagramLink + "')\">"
-	var twitterEl = ( twitterLink == "" ) ? " " :"<img class = socialmedia src = '" + pathToFolder + "images/twitter.png' onclick = \"l('" + twitterLink + "')\">"
+	var facebookEl = ( facebookLink == "" ) ? "" :"<img class = socialmedia src = '" + pathToFolder + "images/facebook.png' onclick = \"l('" + facebookLink + "')\">"
+	var igEl = ( instagramLink == "" ) ? "" :"<img class = socialmedia src = '" + pathToFolder + "images/instagram.png' onclick = \"l('" + instagramLink + "')\">"
+	var twitterEl = ( twitterLink == "" ) ? "" :"<img class = socialmedia src = '" + pathToFolder + "images/twitter.png' onclick = \"l('" + twitterLink + "')\">"
 	doAnimation( "message", "message"+state, "span", 
-				"<div style = 'display: flex; align-items: center; justify-content: center; text-align: center;'> <a class = 'exit' onclick = 'clickButton()' >&#x2715;</a> " + facebookEl + igEl + twitterEl + " </div>", 
+				"<div style = 'width: 100%; display: flex; align-items: center; justify-content: center; text-align: center;'> <a class = 'exit' onclick = 'clickButton()' >&#x2715;</a> " + facebookEl + igEl + twitterEl + "</div>", 
 				"", document.getElementById("socialmediabutton") );
 }
 

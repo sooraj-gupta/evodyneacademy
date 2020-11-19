@@ -30,11 +30,14 @@ function checkScroll()
 {
 	if( document.getElementById("videocontainer").getBoundingClientRect().top < 0 )
 	{
-		document.getElementById( "socialmediabutton" ).style.display = "flex";
+		document.getElementById( "socialmediabutton" ).style.visibility = "visible";
 	}
 	else
 	{
-		document.getElementById( "socialmediabutton" ).style.display = "none";
+		if( !clicked )
+		{
+			document.getElementById( "socialmediabutton" ).style.visibility = "hidden";
+		}
 	}
 }
 
