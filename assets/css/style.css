@@ -3,6 +3,8 @@
 :root{
     --bg: #ffffff;
     --main: #ffa500;
+	--maincolorforsharebutton: orange;
+	
 }
 
 @keyframes blink-cursor {

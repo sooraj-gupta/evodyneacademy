@@ -1,0 +1,181 @@
+/**********************************
+* sharebutton.css by Sooraj Gupta *
+***********************************/
+
+@import url( "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@keyframes compressedbuttonmovedown
+{
+	0%{ 
+		top: 30px; 
+		width: 30px;
+		border-radius: 100px;
+		justify-content: center;
+	}
+	100%{ 
+		top: calc( 100% - 80px);
+		width: 30px;
+		border-radius: 100px;
+		justify-content: center;
+	}
+}
+@keyframes uncompressbutton
+{
+	0%
+	{
+		top: calc( 100% - 80px); 
+		width: 30px;
+		border-radius: 25px;
+		justify-content: flex-start;
+	}
+	100%{
+		top: calc( 100% - 80px); 
+		width: calc( 100% - 80px );
+		border-radius: 25px;
+		justify-content: flex-start;
+	}
+}
+@keyframes fadeshareicon
+{
+	0%
+	{
+		opacity: 1;
+		width: auto;
+	}
+	50%{
+		opacity: 0.5;
+		width: auto;
+	}
+	100%{
+		opacity: 0;
+		width: 0px;
+	}
+}
+@keyframes fademessage
+{
+	0%
+	{
+		opacity: 0;
+		width: 0px;
+		visibility: hidden;
+	}
+	50%{
+		opacity: 0;
+		width: auto;
+		visibility: visible;
+	}
+	100%{
+		opacity: 1;
+		width: auto;
+		//padding-left: 0.5em;
+	}
+}
+#socialmediabutton
+{
+	font-family: 'Roboto';
+	position: fixed;
+	padding: 10px;
+	background-color: var(--maincolorforsharebutton);
+	width: 30px;
+	height: 30px;
+	right: 30px;
+	top: 30px;
+	border-radius: 100px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 100000000;
+}
+
+#dots
+{
+	display: block;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	transition: 0.4s;
+	user-select: none;
+}
+#socialmediabutton:hover #dots
+{
+	transform: rotate(-90deg);
+}
+
+#message
+{
+	font-weight: 200;
+	width: 0px;
+	font-size: 20px;
+	opacity: 0;
+	padding-left: 0vw;
+	color: white;
+}
+.open
+{
+	animation: compressedbuttonmovedown 0.75s ease-in-out forwards, uncompressbutton 0.75s ease-in-out 0.75s forwards;
+}
+.close
+{
+	animation: uncompressbutton 0.75s ease-in-out 0.25s reverse both, compressedbuttonmovedown 0.75s ease-in-out 1.25s reverse forwards;
+}
+.dotsopen
+{
+	animation: fadeshareicon 1s ease-in forwards;
+}
+.messageopen
+{
+	animation: fademessage 1.5s cubic-bezier(0,.5,0,.5) 0.8s forwards;
+}
+.dotsclose
+{
+	animation: fadeshareicon 1s ease-in reverse 1s both;
+}
+.messageclose
+{
+	animation: fademessage 2s cubic-bezier(0,.5,0,.5) -0.75s reverse forwards;
+}
+.exit
+{
+	font-size: 20px;
+	color: var(--maincolorforsharebutton);
+	background-color: white;
+	border: 2px solid transparent;
+	border-radius: 35px;
+	padding: 5px 9px;
+	margin: 0;
+	margin-left: -3px;
+	transition: all 0.4s;
+	display: inline-block;
+}
+.exit:hover
+{
+	display: inline-block;
+	background-color: var(--maincolorforsharebutton);
+	color: white;
+	border: 2px solid white;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+.exit:active
+{
+	background-color: var(--maincolorforsharebutton);
+	color: white;
+	border-color: var(--maincolorforsharebutton);
+}
+.socialmedia
+{
+	height: 35px;
+	width: 35px;
+	margin-left: 20px;
+	transition: all 0.2s;
+}
+.socialmedia:hover
+{
+	height: 45px;
+	width: 45px;
+	cursor: pointer
+}
+.socialmedia:active
+{
+	cursor: pointer
+}

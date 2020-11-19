@@ -24,3 +24,24 @@ function toggleMenu()
 	}
 	open = !open;
 }
+ setInterval( checkScroll, 200 );
+
+function checkScroll()
+{
+	if( document.getElementById("videocontainer").getBoundingClientRect().top < 0 )
+	{
+		document.getElementById( "socialmediabutton" ).style.display = "flex";
+	}
+	else
+	{
+		document.getElementById( "socialmediabutton" ).style.display = "none";
+	}
+}
+
+var facebookLink = 'https://facebook.com/evodyneroboticsacademy';
+var instagramLink = 'https://instagram.com/evodyneacademy';
+var twitterLink = '';
+
+/*To omit a button, leave the value of the link variable as blank. (eg. twitterLink = '')*/
+
+var pathToFolder = 'assets/socialmediaanimation/'; /* YOU MUST HAVE A SLASH AT THE END */
