@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+@keyframes fade
+{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes rotate
+{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(359deg);
+	}
+}
+
+.btn {
+	background-color: var(--color);
+	color: var(--bg);
+	border: 0px solid white;
+	outline: none;
+	padding: 10px 20px;
+	font-family: var(--font);
+	font-size: 15px;
+	letter-spacing: 1.5px;
+	margin-top: 20px;
+}
+.btn.primary
+{
+	background-color: var(--color);
+	color: var(--bg);
+}
+
+.btn.primary:hover, .btn:hover
+{
+	background-color: var(--slightdarkcolor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body,html
+{
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg);
+	scroll-behavior: smooth;
+}
+body{ opacity: 0; }
+.topbar
+{
+	font-family: 'Rubik';
+	width: 100%;
+	height:50px;
+	background-color: var(--color);
+	color: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.topbar #content{ width: 90%; }
+.topbar #email 
+{
+	float: left;
+	width: 100px;
+	margin: auto 0px;
+}
+.topbar #social 
+{
+	float: right;
+	height: 20px;
+}
+.topbar #social .icon
+{
+	margin: 0px 5px;
+	padding: 0px;
+	font-size: 22px;
+	color: var(--bg);
+	text-decoration: none;
+}
+.topbar #social .icon:hover{ transform: scale(1.1); }
+
+
+
+.nav {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav .logo {
+	float: left;
+	height: 100%;
+}
+
+.nav .content {
+	width: 90%;
+}
+
+.nav .menu {
+	font-family: var(--font);
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+}
+.nav .menu button
+{
+	margin-left: 4vw;
+	margin-right: 0px;
+	font-weight: 400;
+}
+
+#main {
+	position: relative;
+	width: 100%;
+	height: calc( 100vh - 130px );
+	min-height: 450px;
+}
+
+#main #bg {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+	background-position: center;
+	background-size: cover;
+	filter: brightness(20%);
+}
+
+#main .content {
+	color: var(--main);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+#main .content #title h2 {
+	font-family: var(--font);
+	color: var( --bg );
+	font-size: calc( 2.25vw + 37px );
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	margin-top: -15px;
+}
+#main .content #title h1{
+	margin: 0;
+	padding: 0;
+	font-family: var(--font);
+	color: var(--color); 
+	font-size: calc( 4.9vw + 82px ); 
+	letter-spacing: 1px; 
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+#main .content #title {
+	font-size: calc( 2.2vw + 39px );
+	margin-left: calc( 4.9vw  );
+	width: 10em;
+}
+#main .content #title h3 {
+	font-family: var(--font);
+	font-size: calc( 0.5vw + 15px );
+	font-weight: 100;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 6px;
+	margin-top: 20px;
+	color: var(--slightdarkbg);
+}
+
+#main .content #title a
+{
+	margin-left: 20px;
+}
+#main .content #title a:first-of-type
+{
+	margin-left: 6px;
+}
+
+
+
+
+
+
+.section
+{
+	padding: 150px 10px;
+}
+.section.colored
+{
+	background-color: var(--color);
+	color: var(--bg);
+}
+
+
+.threesplittable
+{
+	width: 100%;
+	display: flex;
+}
+.threesplit
+{
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.split
+{
+	width: 33vw;	
+	padding:20px 0px;
+}
+.split i
+{
+	font-size: 100px;
+	text-align: center;
+	width: 100%;
+	color: var(--color);
+}
+.split h1
+{
+	text-transform: uppercase;
+	font-family: var(--font);
+	font-weight: 700;
+	font-size: calc( 0.75vw + 35px );
+	text-align: center;
+	color: var(--main);
+}
+
+.split p
+{
+	text-align: left;
+	line-height: 1.3em;
+	font-family: var(--font);
+	padding: 0px 8%;
+}
+
+
+.threesplit .split 
+{
+	width: 95%;
+	padding: 50px 0px;
+}
+.threesplittable #one, .threesplittable #two
+{
+	border-right: 3px solid var(--color);
+}
+
+#keythings
+{
+	padding: 100px 0px;
+}
+
+
+.section > h1
+{
+	text-transform: uppercase;
+	font-family: var(--font);
+	font-weight: 700;
+	font-size: calc( 0.5vw + 45px );
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.section > h3
+{
+	font-family: var(--font);
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: calc( 0.5vw + 20px );
+	text-align: center;
+	color: var( --main );
+}
+.section > .message
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.message > *
+{
+	list-style-type: none;
+	font-family: var(--font);
+	margin: 0;
+	padding: 0;
+	font-weight: 100;
+	font-size: 16px;
+	text-align: left;
+	width: calc( 40vw + 120px );
+}
+.message > li
+{
+	line-height: 10px
+}
+
+.message li:nth-child(even) i
+{
+	font-size: 20px;
+	transform-origin: 40% 50%;
+	animation: rotate 10s infinite linear;
+}
+.message li:nth-child(odd) i
+{
+	font-size: 20px;
+	transform-origin: 40% 50%;
+	animation: rotate 10s infinite 1s linear reverse;
+}
+
+
+
+
+
+
+
+
+
+
+.mobile
+{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media ( max-width: 600px )
+{
+	.nav .menu
+	{
+		display:  none
+	}
+	.nav .content
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.nav .content .logo
+	{
+		height: 80px;
+	}
+	#main .content
+	{
+		justify-content: center;
+	}
+	.mobile
+	{
+		display: inline-block;
+	}
+	.desktop
+	{
+		display: none;
+	}
+	.threesplittable
+	{
+		display: none;
+	}
+	.threesplit
+	{
+		display: flex;
+	}
+	#main .content #title h1{
+		text-align: justify;
+		font-size: calc( 4.9vw + 51px ); 
+	}
+	#main .content #title h2 {
+		text-align: justify;
+		font-size: calc( 2.25vw + 23px );
+		margin-top: -15px;
+	}
+	#main .content #title h3 {
+		font-size: calc( 0.5vw + 15px );
+	}
+	#main .content #title {
+		margin: 0;
+		font-size: calc( 2.25vw + 23px );
+	}
+	.btn
+	{
+		font-size: 12px;
+	}
+	#main .content #title .btn
+	{
+		width: 100%;
+	}
+	#main .content #title a
+	{
+		margin-left: 0px;
+	}
+	#main .content #title a:first-of-type
+	{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.message > *
+	{
+		width: calc( 80vw );
+	}
+
+}
+

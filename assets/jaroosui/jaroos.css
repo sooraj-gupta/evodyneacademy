@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+
+:root
+{
+	--mainbutton: #f00;
+	--mainbuttontext: white;
+	--mainunderlinetext: black;
+	--mainunderline: #ee6969;
+	
+	--font-family:'Roboto'
+}
+
+
+
+
+
+/************************* GENERAL *************************************/
+.button, .button:hover, .button:focus
+{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+button:hover
+{
+	cursor: pointer;
+}
+button:focus
+{
+	outline: none
+}
+
+.fig button, .regular, .regular:focus, .underline, .underline:focus, .fill, .fill:focus
+{
+	font-family: var(--font-family);
+	text-transform: uppercase;
+	color: var(--mainbuttontext);
+	font-size: 20px;
+	font-weight: 500;
+	border: 0px solid var(--mainbuttontext);
+	background-color: var(--mainbutton);
+	padding: 0px 15px;
+	height: 40px;
+	border-radius: 2px;
+	white-space: nowrap;
+	margin: 0;
+} 
+
+
+
+
+
+
+
+
+/*********************************** REGULAR ********************************/
+.regular
+{
+/*	transition: 0.2s;*/
+	margin: 0px 10px;
+}
+.regular:hover
+{
+	text-transform: uppercase;
+	color: var(--mainbuttontext);
+	font-size: 20px;
+	font-weight: 500;
+	border: 0px solid var(--mainbuttontext);
+	background-color: var(--darkbutton);
+	padding: 0px 15px;
+	height: 40px;
+	border-radius: 2px;
+	margin: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************** HINGE ******************************************/
+.hinge, .hinge:hover
+{
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.hingescene
+{
+	width: auto;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.hingescene .fig
+{
+	width: auto;
+	position: relative;
+/*	transition: 0.5s;*/
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.hingescene .fig .face
+{
+	width: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: 0.5s;
+	transition-timing-function: cubic-bezier(0.4, 1, 0.7, 1.2);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.hingescene .fig .title
+{
+/*	transition: 0.2s;*/
+	white-space: nowrap;
+	transform: rotateX(0deg) translateZ(20px);
+}
+.hingescene .fig .msg
+{
+	font-size: 14px;
+	padding: 0px 8px;
+	height: 25px;
+	opacity: 0;
+	background-color: var(--lightbutton);
+	transform: rotateX(-180deg) translateZ(21px)
+}
+
+.hingescene .fig:hover > .title
+{
+	background-color: var(--darkbutton);
+}
+
+.hinge:hover .msg
+{
+	opacity: 1;
+	transform: rotateX(-0deg) translateZ(20px) translateY(42px)
+}
+
+
+
+
+
+
+
+
+
+/******************************* HALF/FULL ROTATION *****************************/
+.halfrotscene, .fullrotscene, .halfrotscene:hover
+{
+	//width: auto;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	margin: 0;
+}
+.halfrotscene .fig, .fullrotscene .fig
+{
+	//width: auto;
+	position: relative;
+	transition: 0.35s;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) translateY(-10px);
+	transition-timing-function: cubic-bezier(0.4, 1, 0.7, 1.0);
+}
+.halfrotscene .fig
+{
+	transition: 0.25s;
+}
+.halfrotscene .fig .face, .fullrotscene .fig .face
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.halfrotscene .fig .title, .fullrotscene .fig .title
+{
+	white-space: nowrap;
+	transform: rotateX(0deg) translateZ(20px) translateY(0px);
+	
+}
+.reverse .halfrotscene .fig .msg, .reverse .fullrotscene .fig .msg
+{
+	background-color: var(--lightbutton);
+	transform: rotateX(-90deg) translateZ(19.1px) translateY(0px);
+}
+.reverse .halfrotscene .fig .title, .reverse .fullrotscene .fig .title
+{
+	background-color: var(--mainbutton);
+}
+.halfrotscene .fig .msg, .fullrotscene .fig .msg
+{
+	white-space: nowrap;
+	background-color: var(--lightbutton);
+	transform: rotateX(90deg) translateZ(19.1px) translateY(0px);
+	
+}
+.halfrotscene:hover .fig
+{
+	opacity: 1;
+	transform: rotateX(-45deg);
+}
+.reverse .halfrotscene:hover > .fig
+{
+	transform: rotateX(45deg) translateY(-10px);
+}
+
+.fullrotscene:hover .fig
+{
+	opacity: 1;
+	transform: rotateX(-90deg) translateZ(10px) translateY(-20px);
+}
+.reverse .fullrotscene:hover > .fig
+{
+	transform: rotateX(90deg) translateZ(-10px) translateY(-20px);
+}
+
+
+
+
+
+
+
+
+
+/******************************** FLIP BUTTON *******************************/
+.flipscene,
+{
+	//width: auto;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	margin: 0;
+}
+.flipscene .fig
+{
+	//width: auto;
+	position: relative;
+	transition: 0.5s;
+	transform-origin: center 20px 0px;
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.4, 1, 0.7, 1.2);
+}
+.flipscene .fig .face
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.flipscene .fig .title
+{
+	white-space: nowrap;
+	transform: rotateX(0deg) translateZ(0) translateY(0px);
+	
+}
+.reverse .flipscene .fig .msg
+{
+	background-color: var(--mainbutton);
+	transform: rotateX(-180deg) translateZ(0.1) translateY(0px);
+}
+.reverse .flipscene .fig .title
+{
+	background-color: var(--lightbutton);
+}
+.flipscene .fig .msg
+{
+	white-space: nowrap;
+	background-color: var(--lightbutton);
+	transform: rotateX(180deg) translateZ(0.1px) translateY(0px);
+	
+}
+.flipscene:hover .fig
+{
+	opacity: 1;
+	transform: rotateX(-180deg);
+}
+.reverse .flipscene:hover > .fig
+{
+	transform: rotateX(180);
+}
+
+
+
+
+
+
+
+
+
+
+/******************************** UNDERLINE *******************************/
+
+.underline,.underline:focus
+{
+	transition: 0.2s;
+	color: var(--mainunderlinetext);
+	border: none;
+	background-color: transparent;
+	position: relative;
+	padding: 0;
+	margin: 0px 15px;
+	font-size: 18px;
+	font-weight: 300;
+}
+.forward.underline:after
+{
+	margin:0px;
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:4px;
+	width: 0%;
+	height: 2px;
+	transition: 0.25s ease;
+	//transition-timing-function: cubic-bezier(0.2, 1.2, 0.8,1.0);
+	background-color: var(--mainunderline);
+}
+.half.forward.underline:after
+{
+	width: 50%;
+}
+.right.underline:after, .underline.mid:after
+{
+	right: 0;
+	left: auto;
+}
+.underline.mid:after
+{
+	transition: 0.15s;
+	margin-right: 50%;
+}
+.half.underline.mid:after
+{
+	margin-right: 25%;
+}
+.forward.underline:hover:after
+{
+	width: 100%;
+	margin: 0;
+}
+.reverse.underline:after
+{
+	margin:0px;
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:4px;
+	width: 100%;
+	height: 2px;
+	transition: 0.25s ease;
+	//transition-timing-function: cubic-bezier(0.2, 1.2, 0.8,1.0);
+	background-color: var(--mainunderline);
+}
+.reverse.underline:hover:after
+{
+	width: 0%;
+}
+.half.reverse.underline:hover:after
+{
+	width: 50%;
+}
+.half.mid.reverse.underline:after
+{
+	margin-right: 0%;
+}
+.reverse.right.underline:after, .reverse.underline.mid:after
+{
+	right: 0;
+	left: auto;
+}
+.reverse.mid.underline:hover:after
+{
+	margin-right: 50%;
+}
+.half.reverse.mid.underline:hover:after
+{
+	margin-right: 25%;
+}
+
+
+
+
+/******************************** FILL *******************************/
+
+.fill, .fill:focus
+{
+	position: relative;
+	color: var(--bg);
+	border: 0px solid white;
+	outline: none;
+	height: auto;
+	width: auto;
+	padding: 8px 18px;
+	font-family: var(--font);
+	font-size: 15px;
+	letter-spacing: 1.5px;
+	margin-top: 20px;
+	border: 2px solid white;
+	font-weight: 400;
+	z-index: 0;
+}
+.reverse.fill, .reverse.fill:focus
+{
+	background-color: transparent;
+	color: var(--bg);
+}
+.forward.fill:after
+{
+	transition: 0.2s;
+	transition-timing-function: cubic-bezier(.5,0,0,1);
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: 0%;
+	height: 100%;
+	z-index: -1;
+	background-color: var(--mainbutton);
+	visibility: hidden;
+	border: 2px solid var(--mainbutton);
+}
+.reverse.fill:after
+{
+	transition: 0.2s;
+	transition-timing-function: cubic-bezier(.5,0,0,1);
+	content: '';
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: var(--mainbutton);
+	visibility: visible;
+	border: 2px solid var(--mainbutton);
+}
+.mid.forward.fill:after
+{
+	transition: 0.15s;
+	transition-timing-function: ease;
+	margin: 0px 50%;
+}
+.mid.forward.fill:hover:after
+{
+	margin: 0px 0px;
+	transform: skewX(-20deg);
+}
+.mid.reverse.fill:after
+{
+	transition-timing-function: ease;
+	margin: 0px 0%;
+}
+.mid.reverse.fill:hover:after
+{
+	transition: 0.15s;
+	margin: 0px 50%;
+}
+.left.forward.fill:after
+{
+	left: auto;
+	right: -2px;
+}
+.left.reverse.fill:after
+{
+	right: auto;
+	left: -2px;
+}
+.forward.fill:hover:after
+{
+	visibility: visible;
+	width: 100%;
+	border: 2px solid var(--mainbutton);
+	color: var(--mainbuttontext);
+}
+.reverse.fill:hover:after
+{
+	visibility: hidden;
+	width: 0%;
+	border: 2px solid var(--mainbutton);
+	color: var(--mainbuttontext);
+}
+.forward.fill:hover
+{
+	color: var(--mainbuttontext);
+}
+.reverse.fill:hover
+{
+	color: var(--bg);
+}
+
