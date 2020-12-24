@@ -34,10 +34,21 @@
 	background-color: var(--color);
 	color: var(--bg);
 }
+.btn.secondary
+{
+	color: var(--color);
+	background-color:  var(--bg);
+}
 
 .btn.primary:hover, .btn:hover
 {
 	background-color: var(--slightdarkcolor);
+}
+
+.btn.secondary:hover
+{
+	color: var(--color);
+	background-color:  var(--slightdarkbg);
 }
 
 
@@ -220,12 +231,7 @@ body{ opacity: 0; }
 
 .section
 {
-	padding: 150px 10px;
-}
-.section.colored
-{
-	background-color: var(--color);
-	color: var(--bg);
+	padding: 100px 10px;
 }
 
 
@@ -271,6 +277,8 @@ body{ opacity: 0; }
 	line-height: 1.3em;
 	font-family: var(--font);
 	padding: 0px 8%;
+	color: var(--main);
+}
 }
 
 
@@ -299,6 +307,17 @@ body{ opacity: 0; }
 	text-align: center;
 	margin: 0;
 	padding: 0;
+	color: var( --main );
+}
+
+.section.colored > h1
+{
+	color: var( --color );
+}
+
+.section.colored * 
+{
+	color: var( --color );
 }
 .section > h3
 {
@@ -308,6 +327,11 @@ body{ opacity: 0; }
 	font-weight: 400;
 	font-size: calc( 0.5vw + 20px );
 	text-align: center;
+	color: var( --main );
+}
+
+.section.colored > h3
+{
 	color: var( --main );
 }
 .section > .message
@@ -421,33 +445,35 @@ body{ opacity: 0; }
 footer
 {
 	background-color: var(--color);
-	padding: 150px 50px;
-	height: 400px;
+	padding: 100px 50px;
+	height: 430px;
 	color: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 #row
 {
 	width: 100%;
-	height: 70%;
+	height: 75%;
 	display: flex;
 	flex-wrap: wrap;
 }
 footer #left{
 	width: 75%;
 	height: 100%;
-	border: 1px solid black;
 }
 footer #right{
 	width: 24%;
 	height: 143%;
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
 footer #toprow
 {
 	width: 100%;
 	height: 100%;
-	border: 1px solid black;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -458,83 +484,178 @@ footer .column
 {
 	width: 32%;
 	height: 100%;
-	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+/*	border: 1px solid white;*/
+}
+
+footer .column > div
+{
+	width: 90%;
+	height: 100%;
+	
 }
 footer #bottomrow
 {
 	width: 75%;
-	height: 30%;
-	border: 1px solid black;
+	height: 25%;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+/*	border: 1px solid white;*/
 }
+#bottomrow .logo
+{
+	width: 120px;
+	margin-bottom: 10px;
+}
+
+#bottomrow p
+{
+	font-family: var(--font);
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.column h1, #right h1
+{
+	font-family: var(--font);
+	font-weight: 700;
+	font-size: 28px;
+}
+
+.column a,#right a
+{
+	font-family: var(--font);
+	font-weight: 300;
+	color: var(--bg);
+	text-decoration: none;
+	font-size: 20px;
+}
+ #right p
+{
+	font-family: var(--font);
+	font-weight: 300;
+	color: var(--bg);
+	text-decoration: none;
+	font-size: 20px;
+}
+.column a:hover
+{
+	cursor: pointer;
+	color: var(--slightdarkbg);
+}
+
+footer #social
+{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer #social i
+{
+	font-size: 40px;
+	margin: 0px 40px;
+}
+
+footer #getintouch
+{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+footer #getintouch .btn
+{
+	width: 100%;
+}
+
 
 @media (max-width: 1000px )
 {
+	.column a,#right a, #right p
+	{
+		font-size: 15px;
+	}
+	footer
+	{
+		height: 900px;
+	}
+	#row
+	{
+		height: 90%;
+	}
+	footer #left{
+		width: 50%;
+		height: 100%;
+	}
+	footer .column
+	{
+		width: 100%;
+		height: 33%;
+	}
+	footer #right{
+		width: 49%;
+		height: 100%;
+	}
+	footer #bottomrow
+	{
+		width: 100%;
+		height: 10%;
+		align-items: flex-end;
+	}
+	
+}
+
+@media (max-width: 600px )
+{
+	footer .column > div
+	{
+		width: 100%;
+	}
+	footer #social
+	{
+		width: 100%;
+		height: 10px;
+	}
+	footer #getintouch
+	{
+		height: 40px;
+	}
 	footer
 	{
 		height: 1000px;
 	}
 	#row
 	{
-		height: 80%;
-	}
-	footer #left{
-		width: 50%;
-		height: 100%;
-		border: 1px solid black;
-	}
-	footer .column
-	{
-		width: 100%;
-		height: 33%;
-		border: 1px solid black;
-	}
-	footer #right{
-		width: 49%;
-		height: 100%;
-		border: 1px solid black;
-	}
-	footer #bottomrow
-	{
-		width: 100%;
-		height: 20%;
-		border: 1px solid black;
-	}
-}
-
-@media (max-width: 600px )
-{
-	footer
-	{
-		height: 1200px;
-	}
-	#row
-	{
 		display: flex;
 		flex-direction:column-reverse;
 		flex-wrap: nowrap;
-		height: 80%;
+		height: 100%;
 	}
 	footer #left{
 		width: 100%;
-		height: 75%;
-		border: 1px solid black;
+		height: 100%;
 	}
 	footer .column
 	{
 		width: 100%;
 		height: 33%;
-		border: 1px solid black;
 	}
 	footer #right{
 		width: 100%;
-		height: 25%;
-		border: 1px solid white;
+		height: 100%;
 	}
 	footer #bottomrow
 	{
 		width: 100%;
-		height: 20%;
-		border: 1px solid black;
+		height: 8%;
 	}
 }
 

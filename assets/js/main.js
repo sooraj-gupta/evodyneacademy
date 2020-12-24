@@ -32,3 +32,8 @@ document.getElementById("ham").onclick = function()
 	}
 	open = !open;
 }
+
+document.getElementById("color").onclick = function()
+{
+	document.documentElement.style.setProperty("--color", ""+ document.getElementById("color").value );
+}
