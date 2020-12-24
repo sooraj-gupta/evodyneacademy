@@ -106,13 +106,15 @@ body{ opacity: 0; }
 	align-items: center;
 }
 
-.nav .logo {
+.nav .logo { 
 	float: left;
-	height: 100%;
+	height: 70%;
+	margin-top: 10px;
 }
 
 .nav .content {
 	width: 90%;
+	position: relative;
 }
 
 .nav .menu {
@@ -128,7 +130,7 @@ body{ opacity: 0; }
 {
 	margin-left: 4vw;
 	margin-right: 0px;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 #main {
@@ -287,7 +289,7 @@ body{ opacity: 0; }
 	text-transform: uppercase;
 	font-family: var(--font);
 	font-weight: 700;
-	font-size: calc( 0.5vw + 45px );
+	font-size: calc( 1.2vw + 37px );
 	text-align: center;
 	margin: 0;
 	padding: 0;
@@ -339,7 +341,73 @@ body{ opacity: 0; }
 }
 
 
+#testimonials
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.card
+{
+	width: 375px;
+	height: 450px;
+	background-color: var(--color);
+	box-shadow: 10px 10px 30px #0005;
+	color: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 40px 40px;
+	position: relative;
+	z-index: -1;
+}
 
+.card > div
+{
+	text-align: center;
+	
+	font-family: var(--font);
+	font-size: 17px;
+	line-height: 1.5em;
+	width: 300px;
+	font-weight: 100;
+	margin: 0;
+	padding-bottom: 25px;
+}
+.card > div:first-of-type
+{
+	position: absolute;
+	top: 80px;
+}
+
+.card #author
+{
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.card .icon
+{
+	color: var(--bg);
+	font-size: 30px;
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	background-color: var(--color);
+	box-shadow: 0px 10px 30px #0005;
+	z-index: 10;
+	left: 50px;
+	top: -20px;
+	padding-top: 13px;
+	margin: 0;
+}
 
 
 
@@ -365,9 +433,37 @@ body{ opacity: 0; }
 
 @media ( max-width: 600px )
 {
+	
+	body.open
+	{
+		overflow: hidden;
+	}
 	.nav .menu
 	{
-		display:  none
+		display: none;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background-color: white;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
+	}
+	.nav .menu.open
+	{
+		display: flex;
+	}
+	.nav .menu button
+	{
+		margin: 50% 0;
+	}
+	.nav .content > #ham
+	{
+		z-index: 200;
 	}
 	.nav .content
 	{
@@ -378,12 +474,34 @@ body{ opacity: 0; }
 	}
 	.nav .content .logo
 	{
-		height: 80px;
+		margin-top: 0px;
+		height: 50px;
+		z-index: 200;
+	}
+	
+	#ham {
+		font-size: 25px;
+		position: absolute;
+		right: 0px;
+		top: 0.5em;
+	}
+	body.open #ham {
+		font-size: 25px;
+		position: absolute;
+		right: 0em;
+		top: -12px;
+	}
+	
+	.nav .content .logo.open{
+		position: fixed;
+		top: 64px;
 	}
 	#main .content
 	{
 		justify-content: center;
 	}
+	
+	
 	.mobile
 	{
 		display: inline-block;
@@ -437,6 +555,14 @@ body{ opacity: 0; }
 	{
 		width: calc( 80vw );
 	}
-
-}
+	
+	.card
+	{
+		margin: 50px 10px;
+		height: 500px;
+	}
+	.card > div
+	{
+		width: 250px;
+	}
 

@@ -8,7 +8,7 @@
 			:root
 			{
 				--main: #000;
-				--color: #ff7600;
+				--color: #ff0000;
 				--slightdarkcolor: #c00;
 				--bg: #fff;
 				--slightdarkbg: #ddd;
@@ -30,7 +30,8 @@
 		</section>
 		<section class = "nav">
 			<div class = "content">
-				<img class = "logo" src = "assets/images/logo.png" >
+				<img class = "logo" src = "assets/images/hand-only.png" >
+				<i id = "ham" onclick = "document.getElementsByClassName('menu')[0].classList.toggle( 'open' ); document.getElementsByClassName('logo')[0].classList.toggle( 'open' ); document.body.classList.toggle( 'open' ) "class = "fas fa-bars"></i>
 				<div class = "menu">
 					<a href = "index.html"><button class = "underline mid">Home</button></a>
 					<a href = "#keythings"><button class = "underline mid">About</button></a>
@@ -108,6 +109,39 @@
 				</div>
 			</div>
 		</section>
+		<section id = "testimonials" class = "section">
+			<h1 style = "width: 100%; padding-bottom: 50px;">Testimonials</h1>
+			<div class = "card">
+				<div>He really loved the class last week and was so excited to show me what he learned.  He kept trying to demo the robot arm for me while I was driving home....  It was good to see him get more into the programming, that's been an area he's not that comfortable with, so he seems to have picked up quite a bit.   I think he would really like the 3D printing one as well.</div>
+				<div id = "author">Barbara W.</div>
+				<div class = "icon"><i class = "fa fa-quote-right"></i></div>
+			</div>
+			<div class = "card">
+				<div>
+					[Son] was excited about the Robotics class he took with you a few weeks ago, and he wants to sign up for the Advanced Robotics if you still have a space for him. Please let me know what I need to do to register him!
+				</div>
+				<div id = "author">Meridith W.</div>
+				<div class = "icon"><i class = "fa fa-quote-right"></i></div>
+			</div>
+			<div class = "card">
+				<div>
+					
+					[Son] is really enjoying exploring the robotic arm and everything he learned in your class. He enjoys working on it everyday on his own, trying new ideas and really persisting till it works!
+
+					Thanks so much again
+				</div>
+				<div id = "author">Archana U.</div>
+				<div class = "icon"><i class = "fa fa-quote-right"></i></div>
+			</div>
+			<div class = "card">
+				<div>
+					[Daughter] really enjoyed the way you taught the class and had fun building and programming the robotic arm. She is looking forward to the next class.
+				</div>
+				<div id = "author">Anu K.</div>
+				<div class = "icon"><i class = "fa fa-quote-right"></i></div>
+			</div>
+		</section>
+		
 		<style>body{animation: fade 0.5s forwards}</style>
 		<script src = "assets/jaroosui/jaroos.js"></script>
 	</body>
