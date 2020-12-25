@@ -28,12 +28,18 @@
 	font-size: 15px;
 	letter-spacing: 1.5px;
 	margin-top: 20px;
+	transition: 0.2s;
 }
 .btn.primary
 {
 	background-color: var(--color);
 	color: var(--bg);
 }
+#main .btn
+{
+	box-shadow: 5px 5px 10px #0005;
+}
+
 .btn.secondary
 {
 	color: var(--color);
@@ -74,6 +80,41 @@ body,html
 	scroll-behavior: smooth;
 }
 body{ opacity: 0; }
+
+
+
+.important
+{
+	--sidepadding: 30px;
+	padding: 25px var(--sidepadding);
+	background-color: #ffea93;
+	font-family: var(--font);
+	text-align: center;
+	display: table;
+	width: calc( 100% - 2*var(--sidepadding));
+}
+.important #x
+{
+	position: absolute; 
+	top: 0.2em;
+	right: 0.7em;
+	font-family: var(--font);
+	font-weight: 100;
+	font-size: 30px;
+	transition: 0.2s;
+	transform-origin: 50% 56%;
+}
+.important #x:hover
+{
+	cursor: pointer;
+	transform: scale(1.2) rotate(0deg);
+}
+
+body.open .important
+{
+	display: none;
+}
+
 .topbar
 {
 	font-family: 'Rubik';
@@ -140,7 +181,7 @@ body{ opacity: 0; }
 }
 .nav .menu button
 {
-	margin-left: 4vw;
+	margin-left: calc( 5vw - 20px );
 	margin-right: 0px;
 	font-weight: 700;
 }
@@ -197,6 +238,7 @@ body{ opacity: 0; }
 	letter-spacing: 1px; 
 	font-weight: 700;
 	margin-bottom: 0px;
+	white-space: nowrap;
 }
 
 #main .content #title {
@@ -214,7 +256,6 @@ body{ opacity: 0; }
 	margin-top: 20px;
 	color: var(--slightdarkbg);
 }
-
 #main .content #title a
 {
 	margin-left: 20px;
@@ -222,6 +263,17 @@ body{ opacity: 0; }
 #main .content #title a:first-of-type
 {
 	margin-left: 6px;
+}
+
+#o1
+{
+	padding-bottom: 0px;  
+	font-size: 0.855em; 
+	animation: rotate 30s infinite linear;
+	
+}
+#o1:hover
+{
 }
 
 
@@ -249,10 +301,36 @@ body{ opacity: 0; }
 	flex-wrap: wrap;
 }
 
-.split
+.threesplit .split, .threesplittable .split
 {
 	width: 33vw;	
 	padding:20px 0px;
+}
+
+#contact
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.twosplit 
+{
+	max-width: 1000px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+}
+
+.split iframe
+{
+	width: 100%;
+	height: 550px;
+}
+.twosplit .split
+{
+	width: 45vw;
+	margin: 0px 2vw;
 }
 .split i
 {
@@ -280,6 +358,35 @@ body{ opacity: 0; }
 	color: var(--main);
 }
 
+.twosplit .split h1{
+	text-transform:none;
+	font-weight: 700;
+	font-size: calc( 32px );
+	margin-top: 0;
+	text-align: left;
+	color: var(--color);
+}
+
+.twosplit .split p{
+	text-transform:none;
+	font-weight: 100;
+	font-size: 19px;
+	margin-top: 0;
+	text-align: left;
+	color: var(--main);
+	padding: 0px 0px;
+	transition: 0.1s;
+}
+.twosplit .split a
+{
+	text-decoration: none;
+}
+.twosplit .split a:hover p
+{
+	text-decoration: underline;
+	text-decoration-color: var(--color);
+	transform: translateX(5px);
+}
 
 .threesplit .split 
 {
@@ -312,12 +419,34 @@ body{ opacity: 0; }
 .section.colored > h1
 {
 	color: var( --color );
+	z-index: 1;
 }
 
 .section.colored * 
 {
 	color: var( --color );
+	z-index: 1;
+	position: relative;
 }
+
+#covid{
+	background-image: url("https://images.unsplash.com/photo-1584634428004-1180accbcc9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#covid .bg
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fffc;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	
+}
+
 .section > h3
 {
 	font-family: var(--font);
@@ -332,6 +461,7 @@ body{ opacity: 0; }
 .section.colored > h3
 {
 	color: var( --main );
+	z-index: 10;
 }
 .section > .message
 {
@@ -347,13 +477,13 @@ body{ opacity: 0; }
 	margin: 0;
 	padding: 0;
 	font-weight: 100;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: left;
-	width: calc( 40vw + 120px );
+	width: calc( 40vw + 200px );
 }
-.message > li
+.message li
 {
-	line-height: 10px
+	line-height: 2em;
 }
 
 .message li:nth-child(even) i
@@ -381,9 +511,9 @@ body{ opacity: 0; }
 {
 	width: 375px;
 	height: 450px;
-	background-color: var(--color);
+	background-color: var(--bg);
 	box-shadow: 10px 10px 30px #0005;
-	color: var(--bg);
+	color: var(--main);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -439,7 +569,53 @@ body{ opacity: 0; }
 }
 
 
+form
+{
+	width: 100%;
+}
+form .row
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+form .row:first-of-type
+{
+	margin-bottom: 30px;
+}
+form input, form textarea
+{
+	font-family: var(--font);
+	width: 100%;
+	border: 0px solid white;
+	border-radius: 0px;
+	padding: 10px;
+	padding-left: 0px;
+	outline: none;
+	border-bottom: 2px solid var(--color);
+	font-size: 18px;
+	transition: 0.2s;
+	background-color: transparent;
+	resize: none;
+}
 
+form input:focus,form textarea:focus
+{
+	transform:  translateY(-3px );
+}
+form input:first-of-type
+{
+	margin-right: 10px;
+	width: calc( 100% - 10px);
+}
+form textarea
+{
+	width: 100%;
+	height: 150px;
+	font-family: var(--font);
+}
 
 footer
 {
@@ -467,6 +643,7 @@ footer #left{
 footer #right{
 	width: 24%;
 	height: 143%;
+	z-index: 100;
 /*	border: 1px solid black;*/
 }
 footer #toprow
@@ -516,6 +693,9 @@ footer #bottomrow
 	font-family: var(--font);
 	font-weight: 300;
 	font-size: 20px;
+	width: 100%;
+	white-space: nowrap;
+	padding: 0;
 }
 
 .column h1, #right h1
@@ -578,7 +758,7 @@ footer #getintouch .btn
 
 @media (max-width: 1000px )
 {
-	.column a,#right a, #right p
+	footer a, footer p, #right p
 	{
 		font-size: 15px;
 	}
@@ -609,6 +789,41 @@ footer #getintouch .btn
 		height: 10%;
 		align-items: flex-end;
 	}
+	.twosplit
+	{
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+	.twosplit .split
+	{
+		width: 100%;
+		margin: 0px;
+	}
+	.twosplit .split p
+	{
+		font-size: 15px;
+	}
+	form .row
+	{
+		flex-wrap: wrap;
+	}
+	form button
+	{
+		margin-bottom: 50px;
+	}
+	form input:first-of-type
+	{
+		width: 100%;
+		margin-right: 0px;
+	}
+	form input
+	{
+		margin-bottom: 40px;
+	}
+	form .row:first-of-type
+	{
+		
+	}
 	
 }
 
@@ -630,6 +845,8 @@ footer #getintouch .btn
 	footer
 	{
 		height: 1000px;
+		flex-direction: column;
+		flex-wrap: nowrap;
 	}
 	#row
 	{
@@ -640,7 +857,7 @@ footer #getintouch .btn
 	}
 	footer #left{
 		width: 100%;
-		height: 100%;
+		height:77%;
 	}
 	footer .column
 	{
@@ -649,12 +866,12 @@ footer #getintouch .btn
 	}
 	footer #right{
 		width: 100%;
-		height: 100%;
+		height: 28%;
 	}
 	footer #bottomrow
 	{
 		width: 100%;
-		height: 8%;
+		height: 12%;
 	}
 }
 
@@ -819,5 +1036,4 @@ footer #getintouch .btn
 	{
 		width: 250px;
 	}
-
 }

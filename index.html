@@ -8,8 +8,8 @@
 			:root
 			{
 				--main: #000;
-				--color: #f00;
-				--slightdarkcolor: #c00;
+				--color: #06c;
+				--slightdarkcolor: #05b;
 				--bg: #fff;
 				--slightdarkbg: #ddd;
 				--font: 'Roboto';
@@ -19,6 +19,12 @@
 		<link href = "assets/css/style.css" rel = "stylesheet">
 	</head>
 	<body>
+		
+		<section class = "important">
+			Now Enrolling for <strong>January 2021</strong> Sessions. <strong>Demand is high!</strong> Reserve your seat now to get the <strong>holiday discount</strong> and your preferred timings.
+			<a id = "x" onclick="this.parentElement.style.display = 'none';">&#215;</a>
+		</section>
+		
 		<section class = "topbar">
 			<div id = "content">
 				<a id = "email">support@evodyneacademy.com</a>
@@ -36,8 +42,8 @@
 				<div class = "menu">
 					<a href = "index.html"><button class = "underline mid">Home</button></a>
 					<a href = "#keythings"><button class = "underline mid">About</button></a>
-					<a href = ""><button class = "underline mid">Contact</button></a>
 					<a href = "#covid"><button class = "underline mid">Covid-19</button></a>
+					<a href = "#contact"><button class = "underline mid">Contact Us</button></a>
 				</div>
 			</div>
 		</section>
@@ -46,7 +52,7 @@
 			<div class = "content">
 				
 				<div id = "title">
-					<h1 style = "">EV<span class = "mobile">O</span><i style = "padding-bottom: 0px;  font-size: 0.855em; animation: rotate 30s infinite linear;" class = "desktop fa fa-cog"></i>DYNE</h1>
+					<h1 style = "">EV<span class = "mobile">O</span><i id = "o1" class = "desktop fa fa-cog"></i>DYNE</h1>
 					<h2 style = "margin-left: 4px;">R<span class = "mobile">O</span><i style = "font-size: 0.86em; animation: rotate 20s infinite linear;" class = "fa fa-cog desktop"></i>B<i style = "font-size: 0.86em; animation: rotate 20s infinite linear;" class = "fa fa-cog desktop"></i><span class = "mobile">O</span>TICS ACADEMY</h2>
 					<h3>State-of-the-art robotics education taught by actual industry experts via Zoom or in-person with COVID-19 safety in mind.</h3>
 					<h3></h3>
@@ -109,6 +115,7 @@
 					<li><i class = "fas fa-cog">&nbsp;</i>Extra cross-ventilation forced air through back to front of building to ensure constant fresh air</li>
 				</div>
 			</div>
+			<div class = "bg"></div>
 		</section>
 		<section id = "testimonials" class = "section">
 			<h1 style = "width: 100%; padding-bottom: 50px;">Testimonials</h1>
@@ -143,8 +150,30 @@
 			</div>
 		</section>
 		
-		<section class = "section">
-		
+		<section id = "contact" class = "section">
+			<h1 style = "width: 100%; padding-bottom: 50px;">Contact Us</h1>
+			<div class = "twosplit">
+				<div class = "split">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.1414226324628!2d-122.08538378486288!3d37.386487642176796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb72d50c31b99%3A0x28739a320d309661!2s881%20Castro%20St%2C%20Mountain%20View%2C%20CA%2094041!5e0!3m2!1sen!2sus!4v1608867921403!5m2!1sen!2sus" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+				<div class = "split">
+					<h1>Ask A Question Or Submit A Class Suggestion!</h1>
+					<a href = "https://goo.gl/maps/RpmFrMaABM6UhoYt9"><p>881 Castro St, Mountain View, CA 94041 </p></a>
+					<a href = "mailto:support@evodyneacademy.com"><p>support@evodyneacademy.com</p></a>
+					<a href = "tel:6503181534"><p>(650) 318-1534</p></a>
+					<br>
+					<form>
+						<div class ="row">
+							<input name = "name" placeholder="Name">
+							<input name = "email" placeholder="Email">
+						</div>
+						<div class ="row">
+							<textarea name = "msg" placeholder="Message..."></textarea>
+						</div>
+						<button class = "btn" style = "width: 100%">Send</button>
+					</form>
+				</div>
+			</div>
 		
 		</section>
 		
@@ -193,9 +222,9 @@
 						<hr>
 						<p>881 Castro St. Mountain View California</p>
 						<p>support@evodyneacademy.com</p>
-						<p>(650) 123-4567</p>
+						<p>(650) 318-1534</p>
 						<p id = "social"><i class = "fa fa-facebook-square"></i><i class = "fa fa-instagram"></i></p>
-						<p id = "getintouch"><button class = "btn secondary">Get In Touch</button></p>
+						<p id = "getintouch"><button class = "btn secondary">GET IN TOUCH</button></p>
 					</div>
 				</div>
 			</div>

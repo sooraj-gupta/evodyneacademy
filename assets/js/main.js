@@ -32,8 +32,26 @@ document.getElementById("ham").onclick = function()
 	}
 	open = !open;
 }
-
-document.getElementById("color").onclick = function()
+document.getElementsByClassName("menu")[0].onclick = function()
 {
-	document.documentElement.style.setProperty("--color", ""+ document.getElementById("color").value );
+	if( open )
+	{
+		for( var i = 0; i < document.getElementsByClassName('underline').length; i++  )
+		{
+			document.getElementsByClassName('underline')[i].style.opacity = "0"
+		}
+		setTimeout( ()=>{document.getElementsByClassName('menu')[0].style.height = "0vh";}, 100 );
+		setTimeout( ()=>{
+			document.getElementsByClassName('menu')[0].classList.toggle( 'open' ); 
+			document.getElementsByClassName('logo')[0].classList.toggle( 'open' ); 
+			document.body.classList.toggle( 'open' );
+		}, 200 )
+		open = !open;
+	}
 }
+
+document.getElementById("color").addEventListener( "keydown", event =>
+{
+	if( event.keyCode == 13 )
+		document.documentElement.style.setProperty("--color", ""+ document.getElementById("color").value );
+});
