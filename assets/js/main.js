@@ -55,3 +55,41 @@ document.getElementById("color").addEventListener( "keydown", event =>
 	if( event.keyCode == 13 )
 		document.documentElement.style.setProperty("--color", ""+ document.getElementById("color").value );
 });
+
+for( var i = 0; i < document.getElementsByClassName("horizmenuitem").length; i++ )
+{
+	document.getElementsByClassName("horizmenuitem")[i].onclick = function()
+	{
+		changeHorizMenuElement( this );
+	}
+}
+
+function changeHorizMenuElement( el )
+{
+	for( var j = 0; j < document.getElementsByClassName("horizmenuitem").length; j++ )
+	{
+		document.getElementsByClassName("horizmenuitem")[j].classList.remove("active");
+	}
+	el.classList.add("active");
+}
+
+let fhs = document.getElementsByClassName("faqheader");
+let lastFH = "#forparents";
+document.addEventListener( "scroll", ()=>{
+	
+	if( document.body.id == "faq" )
+	{
+		for( var i = 0; i < fhs.length; i++ )
+		{
+			if( fhs[i].getBoundingClientRect().top < 0 )
+			{
+				if( lastFH != document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" ) ) 
+				{
+					changeHorizMenuElement( document.getElementsByClassName("horizmenuitem")[i] )
+					lastFH = document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" );
+				}
+			}
+		}
+	}
+	
+});

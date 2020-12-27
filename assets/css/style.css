@@ -178,6 +178,8 @@ body.open .important
 	flex-wrap: wrap;
 	height: 100%;
 	transition: 0.2s;
+	position: sticky;
+	top: 0;
 }
 .nav .menu button
 {
@@ -198,6 +200,126 @@ body.open .important
 	min-height: 450px;
 }
 
+#faqmain
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#faqmain .container
+{
+	max-width: 800px;
+	padding: 30px 0px;
+	width: 90%;
+	font-family: var(--font);
+}
+#faqmain .container > h1{
+	margin: 0;
+	padding: 0;
+	font-size: 50px;
+	font-weight: 400;
+	color: var(--color);
+}
+
+#faqmain .container > h2
+{
+	text-transform: uppercase;
+	font-size: 25px;
+	margin: 0;
+	margin-bottom: 10px;
+	font-weight: 600;
+	margin-left: 2px;
+	letter-spacing: 0.26em;
+	color: var(--majordarkbg);
+}
+
+#faqmain .horizmenu
+{
+	background-color: var(--slightdarkbg);
+	width: 100%;
+	padding: 0px 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+}
+
+
+.horizmenu .horizmenuitem
+{
+	width: 100%;
+	text-align: center;
+	text-transform: capitalize;
+	color: var(--main);
+	font-weight: 600;
+	position: relative;
+	padding: 20px 0px;
+	transition: 0.2s;
+	text-decoration: none;
+}
+.horizmenu .horizmenuitem:hover
+{
+	color: var(--color);
+	cursor: pointer;
+}
+
+.horizmenu .horizmenuitem:after
+{	
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: var(--color);
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.horizmenu .horizmenuitem.active:after
+{
+	opacity: 1;
+}
+
+
+#faqmain .content h2
+{
+	text-transform: uppercase;
+	font-weight: 100;
+	border-bottom: 2px solid var(--slightdarkbg);
+	padding: 10px 0px;
+	margin-bottom: 35px;
+	letter-spacing: 0.1em;
+	width: 100%;
+	padding-top: 100px;
+	margin-top: -80px;
+}
+
+#faqmain .content h3
+{
+	font-weight: 400;
+	font-size: 20px;
+	color: var(--color);
+	margin-bottom: 15px;
+}
+#faqmain .content h4
+{
+	margin: 0;
+	font-weight: 100;
+	font-size: 16px;
+	color: var(--main);
+	line-height: 1.5em;
+	padding-left: 0em;
+	padding-bottom: 1.5em;
+}
+
+
+
 #main #bg {
 	z-index: -1;
 	position: absolute;
@@ -205,7 +327,7 @@ body.open .important
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+	background-image: url('../images/tictactoe.jpeg');
 	background-position: center;
 	background-size: cover;
 	filter: brightness(20%);
@@ -1036,4 +1158,9 @@ footer #getintouch .btn
 	{
 		width: 250px;
 	}
+}
+
+#color {
+	margin: 0;
+	height: 100%;
 }
