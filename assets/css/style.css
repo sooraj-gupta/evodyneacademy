@@ -179,7 +179,7 @@ body.open .important
 	height: 100%;
 	transition: 0.2s;
 	position: sticky;
-	top: 0;
+	top: 0; 
 }
 .nav .menu button
 {
