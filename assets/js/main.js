@@ -60,7 +60,7 @@ for( var i = 0; i < document.getElementsByClassName("horizmenuitem").length; i++
 {
 	document.getElementsByClassName("horizmenuitem")[i].onclick = function()
 	{
-		changeHorizMenuElement( this );
+		//changeHorizMenuElement( this );
 	}
 }
 
@@ -81,7 +81,7 @@ document.addEventListener( "scroll", ()=>{
 	{
 		for( var i = 0; i < fhs.length; i++ )
 		{
-			if( fhs[i].getBoundingClientRect().top < 0 )
+			if( fhs[i].getBoundingClientRect().top < 20 )
 			{
 				if( lastFH != document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" ) ) 
 				{

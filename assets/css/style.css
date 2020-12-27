@@ -125,6 +125,7 @@ body.open .important
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 .topbar #content{ width: 90%; }
 .topbar #email 
@@ -156,6 +157,11 @@ body.open .important
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: sticky;
+	top: 0px;
+	background-color: var(--bg);
+	z-index: 10000;
+	box-shadow: 0px 0px 20px #0006;
 }
 
 .nav .logo { 
@@ -178,8 +184,6 @@ body.open .important
 	flex-wrap: wrap;
 	height: 100%;
 	transition: 0.2s;
-	position: sticky;
-	top: 0; 
 }
 .nav .menu button
 {
@@ -246,7 +250,8 @@ body.open .important
 	justify-content: space-between;
 	align-items: center;
 	position: sticky;
-	top: 0;
+	top: 80px;
+	z-index: 100000;
 }
 
 
@@ -274,17 +279,21 @@ body.open .important
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 0%;
 	height: 3px;
 	background-color: var(--color);
-	opacity: 0;
+	opacity: 1;
 	transition: 0.2s;
+	margin: 0px 50%;
 }
 
 .horizmenu .horizmenuitem.active:after
 {
 	opacity: 1;
+	width: 100%;
+	margin: 0;
 }
+
 
 
 #faqmain .content h2
@@ -296,8 +305,8 @@ body.open .important
 	margin-bottom: 35px;
 	letter-spacing: 0.1em;
 	width: 100%;
-	padding-top: 100px;
-	margin-top: -80px;
+	padding-top: 180px;
+	margin-top: -160px;
 }
 
 #faqmain .content h3
@@ -1019,6 +1028,20 @@ footer #getintouch .btn
 @media ( max-width: 600px )
 {
 	
+	#faqmain .container > h2
+	{
+		letter-spacing: 0px;
+		font-size: 18px;
+		width: 100%;
+		text-align: center;
+	}
+	#faqmain .container > h1
+	{
+		letter-spacing: 0px;
+		font-size: 24px;
+		width: 100%;
+		text-align: center;
+	}
 	body.open
 	{
 		overflow: hidden;
