@@ -75,7 +75,7 @@ function changeHorizMenuElement( el )
 
 let fhs = document.getElementsByClassName("faqheader");
 let lastFH = "#forparents";
-document.addEventListener( "scroll", ()=>{
+setInterval( ()=>{
 	
 	if( document.body.id == "faq" )
 	{
@@ -85,11 +85,15 @@ document.addEventListener( "scroll", ()=>{
 			{
 				if( lastFH != document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" ) ) 
 				{
-					changeHorizMenuElement( document.getElementsByClassName("horizmenuitem")[i] )
-					lastFH = document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" );
+					if( i < document.getElementsByClassName("horizmenuitem").length )
+					{
+						changeHorizMenuElement( document.getElementsByClassName("horizmenuitem")[i] )
+						lastFH = document.getElementsByClassName("horizmenuitem")[i].getAttribute( "href" );
+					}
+					console.log( fhs[i] );
 				}
 			}
 		}
 	}
 	
-});
+}, 300 );
