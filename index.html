@@ -20,9 +20,9 @@
 	</head>
 	<body id = "index">
 		
-		<section class = "important">
+		<section class = "important" id = "jan2021warn">
 			Now Enrolling for <strong>January 2021</strong> Sessions. <strong>Demand is high!</strong> Reserve your seat now to get the <strong>holiday discount</strong> and your preferred timings.
-			<a id = "x" onclick="this.parentElement.style.display = 'none';">&#215;</a>
+			<a id = "x" onclick="this.parentElement.style.display = 'none'; localStorage.setItem( 'jan2021warn', 'closed' )">&#215;</a>
 		</section>
 		
 		<section class = "topbar">
@@ -41,7 +41,7 @@
 				<i id = "ham" class = "fas fa-bars"></i>
 				<div class = "menu">
 					<a href = "index.html"><button class = "underline mid">Home</button></a>
-					<a href = "#keythings"><button class = "underline mid">About</button></a>
+					<a href = "evoarm.html"><button class = "underline mid">EvoArm</button></a>
 					<a href = "#covid"><button class = "underline mid">Covid-19</button></a>
 					<a href = "#contact"><button class = "underline mid">Contact Us</button></a>
 				</div>
@@ -208,7 +208,7 @@
 								<h1>Quick Links</h1>
 								<hr>
 								<a><p>Home</p></a>
-								<a><p>Courses</p></a>
+								<a href = "evoarm.html"><p>EvoArm</p></a>
 								<a><p>Kits</p></a>
 								<a><p>COVID-19</p></a>
 								<a><p>Contact</p></a>

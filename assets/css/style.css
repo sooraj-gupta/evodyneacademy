@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 @keyframes fade
 {
 	0%{
@@ -78,8 +79,14 @@ body,html
 	padding: 0;
 	background-color: var(--bg);
 	scroll-behavior: smooth;
+	position:relative;
+	overflow-x: hidden;
 }
-body{ opacity: 0; }
+body >div
+{
+	
+}
+body{ opacity: 0; overflow-x: hidden }
 
 
 
@@ -90,7 +97,7 @@ body{ opacity: 0; }
 	background-color: #ffea93;
 	font-family: var(--font);
 	text-align: center;
-	display: table;
+	display: none;
 	width: calc( 100% - 2*var(--sidepadding));
 }
 .important #x
@@ -125,6 +132,7 @@ body.open .important
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 900;	
 
 }
 .topbar #content{ width: 90%; }
@@ -160,8 +168,8 @@ body.open .important
 	position: sticky;
 	top: 0px;
 	background-color: var(--bg);
-	z-index: 10000;
-	box-shadow: 0px 0px 20px #0006;
+	z-index: 900;
+	box-shadow: 0px 10px 12px 0px #0006;
 }
 
 .nav .logo { 
@@ -323,6 +331,155 @@ body.open .important
 	line-height: 1.5em;
 	padding-left: 0em;
 	padding-bottom: 1.5em;
+}
+
+
+
+
+#evoarmmain, #armyourbrain
+{
+	padding: 50px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+}
+#evoarmmain h1
+{
+	font-size: 150px;
+	width: 100%;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+}
+#armyourbrain h1
+{
+	font-family: var(--font);
+	text-align: center;
+	font-size: 100px;
+	width: 100%;
+	text-transform: none;
+	font-weight: 200;
+	letter-spacing: 0.0em;
+	margin: 30px 0px;
+}
+
+
+@media( max-width: 1200px )
+{
+	#evoarmmain h1
+	{
+		font-size: 110px;
+	}
+	#armyourbrain h1
+	{
+		font-size: 70px;
+	}
+}
+#armyourbrain .content
+{
+	width: 95%;
+	max-width: 700px;
+}
+#armyourbrain p
+{
+	font-family: var(--font);
+	width: 100%;
+	font-size: 20px;
+	font-weight: 100;
+}
+#armyourbrain .content a
+{
+	text-decoration: none;
+	color: var(--color);
+	font-family: var(--font);
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	
+}
+#armyourbrain .content a:hover
+{
+	text-decoration: underline;
+}
+#evoarm .nav
+{
+	position: relative;
+	box-shadow: none;
+}
+
+#threeevoarmimg
+{
+	width: 95%;
+	max-width: 1100px;
+}
+
+#keyarmthings
+{
+	padding-left: 0;
+	padding-right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	
+}
+#armfromside
+{
+	
+	background-image: url("../images/armfromsiderender.png");
+	max-height: 1243px;
+	max-width: 1500px;
+	height: 60.3378922vw;
+	transform: translateX(-50vw);
+	transition: 0.0s;
+	width: 50vw;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#armkeys {
+	width: 50vw;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+	height: 60.3378922vw;
+}
+#armkeys h1
+{
+	font-family: var(--font);
+	color: var(--color);
+	font-size: 100px;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+#armkeys h4
+{
+	font-family: var(--font);
+	color: var(--main);
+	margin: 0;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	font-weight: 100;
+}
+#armkeys > div
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#ak1,#ak2,#ak3
+{
+	transform: translateX(50vw);
 }
 
 
@@ -557,7 +714,10 @@ body.open .important
 	z-index: 1;
 	position: relative;
 }
-
+.section.maincol
+{
+	background-color: var(--main);
+}
 #covid{
 	background-image: url("https://images.unsplash.com/photo-1584634428004-1180accbcc9a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80");
 	background-size: cover;
@@ -1179,9 +1339,43 @@ footer #getintouch .btn
 	{
 		width: 250px;
 	}
+	
+	#evoarmmain img
+	{
+		padding: 30px 0px;
+	}
+	#evoarmmain h1
+	{
+		font-size: 65px;
+		letter-spacing: 0.1em;
+		padding: 20px 0px;		
+	}
+	#armyourbrain h1
+	{
+		font-size: 45px;
+	}
+	#armyourbrain p, #armyourbrain .content a
+	{
+		font-size: 15px;
+	}
+	#armyourbrain
+	{
+		padding: 0px 15px;
+	}
+	
+	#keyarmthings h1
+	{
+		font-size: 35px;
+	}
+	#keyarmthings h4
+	{
+		font-size: 14px;
+	}
 }
 
 #color {
 	margin: 0;
 	height: 100%;
 }
+
+
