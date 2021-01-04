@@ -484,6 +484,58 @@ body.open .important
 
 
 
+#armapp
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#armapp .content
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--font);
+}
+#armapp .content.one
+{
+	width: 40%;
+	position: relative;
+}
+#armapp .content.two
+{
+	width: 60%;
+	position: relative;
+}
+
+#armapp h1
+{
+	font-size: 65px;
+	font-weight: 200;
+	color: var(--color);
+	margin: 20px 0px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid gray;
+}
+#armapp .content.one div
+{
+	width: 75%;
+}
+
+
+#armapp #appimg1
+{
+	width: 100%;
+}
+#armapp #appimg2
+{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 #main #bg {
 	z-index: -1;
 	position: absolute;
